@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Dancing Script";
+  src: url('DancingScript-Regular.ttf');
+}
+body {
+  font-family: Dancing Script, verdana;
+  background-color:  #02010a;
+}
+/*div principal donde se encuentra el header, section, footer*/
+.contenido {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Indico que quiero todas las cajas incluyan el padding y margin para que no se agrande la caja*/
+* {
+  box-sizing: border-box;
+}
+/*Todas las imagenes del boddy tienen que tener sombra. Para no ponerle una por una*/
+* img {
+  box-shadow: 2px 2px #02010a;
+}
+
+
+header {
+  border: 3px solid blue;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  color: white;
+}
+
+header h1 {
+  text-shadow: 2px 2px #02010a;
+  border: 1px solid yellow;
+}
+
+header ul {
+  border: 2px solid red;
+}
+
+
+
+
+
+footer {
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;  
+}
