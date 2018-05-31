@@ -6,44 +6,134 @@ body {
   font-family: Dancing Script, verdana;
   background-color:  #02010a;
 }
-/*div principal donde se encuentra el header, section, footer*/
+* img {
+  box-shadow: 2px 2px #02010a;
+}
+* {
+  box-sizing: border-box;
+}
 .contenido {
   width: 100%;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
-/*Indico que quiero todas las cajas incluyan el padding y margin para que no se agrande la caja*/
-* {
-  box-sizing: border-box;
-}
-/*Todas las imagenes del boddy tienen que tener sombra. Para no ponerle una por una*/
-* img {
-  box-shadow: 2px 2px #02010a;
-}
-
 
 header {
-  border: 3px solid blue;
   background-color: #5b7989;
   border-radius: 10px 10px 0 0;
   color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 header h1 {
   text-shadow: 2px 2px #02010a;
-  border: 1px solid yellow;
+  flex-direction: column;
+  margin-left: 10px;
+  justify-content: flex-start;
+  text-align: center;
 }
 
-header ul {
-  border: 2px solid red;
+.menu {
+  list-style-type: none;
+  width: 30%
+  height:auto;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.menu li a {
+  color: white;
 }
 
 
+.galeria {
+  width: 33.33%;
+  float: left;
+  background-color: #d5c75f;
 
+
+}
+.galeria img {
+  width: 80%;
+  height: auto;
+  margin: 10%;
+}
+
+.galeria:first-child img {
+  -webkit-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.galeria:nth-child(even) img {
+  -webkit-filter:grayscale(100%);
+  -ms-filter:grayscale(100%);
+  filter:grayscale(100%);
+}
+
+.galeria:nth-child(3) img {
+  -webkit-filter: sepia(90%);
+  -ms-filter: sepia(90%);
+  filter: sepia(90%);
+}
 
 
 footer {
   background-color: #C6d5c5;
   border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+
+  clear: left;
+}
+footer p {
+  font-size-adjust: auto;
+  text-align: left;
+}
+footer div {
+  margin:20px;
+  text-align: justify;
+}
+footer a {
+  color: black;
+}
+footer a:hover {
+  color: rgb(51, 66, 99);
+}
+.iconos {
+  width: 30px;
+  height: auto;
+  margin-left:15px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .contenedorimagenes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .galeria {
+      width: 100%;
+      height: auto;
+    }
+
+    footer {
+      flex-direction: column;
+    }
+
+    .menu {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+    }
 }
